@@ -1,0 +1,95 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formularios2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Qwitcher+Grypen:wght@400;700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <h1>Formulario de Registro</h1>        
+    </div>
+    <div id="contenido">
+        <form>
+
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" >    
+            </div>
+    
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" >
+            </div>
+    
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" >
+            </div>
+    
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="@@@@@@@xxx" >
+            </div>
+    
+            <div>
+                <label for="password_confirm">Confirm Password:</label>
+                <input type="password" id="password_confirm" name="password_confirm" >
+            </div>
+    
+            <div>
+                <label for="date">Date of Birth:</label>
+                <input type="date" id="date" name="date" >
+            </div>
+    
+            <div>
+                <label for="sex">Sex:</label>
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male">Male</label> 
+                <input type="radio" id="female" name="sex" value="male">
+                <label for="female">Female</label> 
+                <input type="radio" id="Rather_not_say" name="sex" value="Rather not say">
+                <label for="Rather_not_say">Rather not say</label>
+            </div>
+    
+            <div>
+                <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+                <label for="terms">Subscribe to our news</label>
+            </div>
+    
+            <div>
+                <label for="description" >A brief description of yourself:</label>
+                <br>
+                <textarea id="description" name="description" rows="4" cols="10"></textarea>
+            </div>
+    
+            <div>
+                <label for="interests">Interests:</label>
+                <br>
+                <select id="interests" name="interests" size="7" >
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                    <option value="movies">Movies</option>
+                    <option value="books">Books</option>
+                    <option value="travel">Travel</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
