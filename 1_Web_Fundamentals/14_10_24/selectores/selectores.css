@@ -1,0 +1,43 @@
+/* Selector Específico: */
+.header{
+    background-color: lightcyan;
+}
+
+
+/* Selector Descendente: */
+
+.quote p{
+    color: darkslategrey;
+    font-style: italic;
+}
+
+.quote h1{
+    color: dodgerblue;
+    font-style: normal;
+}
+
+
+/* Selector descendente directo*/
+.header > img {
+    height: 50px;
+
+}
+
+
+/* Estilo para los párrafos dentro del contenedor*/
+#container p {
+    font-size: 16px;
+    background-color: #333;
+}
+
+/* Estilo para los párrafos dentro del contenedor*/
+
+#container p.highlight {
+    font-weight: bold;
+    color: #ff0000; /* Rojo */
+}
+
+#container p {
+    font-weight: bold;
+    color: #ffffff; /* Blanco */
+}
