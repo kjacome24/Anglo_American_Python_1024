@@ -23,6 +23,11 @@
 
 }
 
+#container{
+    background-color: lightcoral;
+    padding: 10px;
+}
+
 
 /* Estilo para los párrafos dentro del contenedor*/
 #container p {
