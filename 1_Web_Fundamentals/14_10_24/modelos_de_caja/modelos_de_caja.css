@@ -1,0 +1,32 @@
+body{
+
+    background-color: aqua;
+    text-align: center;
+}
+
+div{
+    
+    display: inline-block; /* Change from inline to inline-block */
+    width: 200px;
+    height: 200px;
+
+    margin: 10px;
+    background-color: salmon;
+    color: white;
+}
+
+#primero{
+
+    background-color: lightseagreen;
+}
+
+#segundo{
+
+    background-color: fuchsia;
+}
+
+#tercero{
+
+
+    background-color: #010080;
+}
