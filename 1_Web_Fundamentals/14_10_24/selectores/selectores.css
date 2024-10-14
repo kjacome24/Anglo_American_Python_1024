@@ -4,6 +4,9 @@
 }
 
 
+
+
+
 /* Selector Descendente: */
 
 .quote p{
@@ -40,6 +43,18 @@
 #container p.highlight {
     font-weight: bold;
     color: #ff0000; /* Rojo */
+    text-align: center; 
+
+}
+
+#container p.parrafo1 {
+    text-align: left; 
+
+}
+
+#container p.parrafo2 {
+    text-align: right; 
+
 }
 
 #container p {
@@ -60,3 +75,5 @@ input[type="submit"] {
     color: white;
     background-color: rebeccapurple;
 }
+
+
