@@ -7,7 +7,7 @@ body{
 
 div{
     
-    display: inline-block; /* Change from inline to inline-block */
+    display: inline-block; 
     width: 200px;
     height: 200px;
 

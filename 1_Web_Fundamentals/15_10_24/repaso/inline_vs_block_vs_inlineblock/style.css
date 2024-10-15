@@ -1,0 +1,35 @@
+
+
+#block_tags{
+    height: 350px;
+    background-color: aqua;
+    overflow: auto;
+}
+#inline_tags{
+    height: 250px;
+    background-color: salmon;
+}
+
+/* a{
+    display: block;
+}
+
+label{
+    display: block;
+} */
+
+
+h2, h1, h6, p, ul,ol, li, a, label, form, input, table{
+    display: inline;
+}
+
+
+/* Inline-block to allow control over their dimensions */
+/* h2, h1, h6, p, ul,ol, li, a, label, form, input, table{
+    display: inline-block;
+}
+
+h1{
+    background-color: red;
+    height: 200px;
+} */
