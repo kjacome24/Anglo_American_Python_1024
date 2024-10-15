@@ -2,6 +2,7 @@ body{
 
     background-color: aqua;
     text-align: center;
+    
 }
 
 div{
@@ -16,17 +17,13 @@ div{
 }
 
 #primero{
-
     background-color: lightseagreen;
 }
 
 #segundo{
-
     background-color: fuchsia;
 }
 
 #tercero{
-
-
     background-color: #010080;
 }
