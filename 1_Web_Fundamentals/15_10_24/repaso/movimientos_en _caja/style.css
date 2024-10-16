@@ -1,0 +1,30 @@
+  /*tHE Process below uses static movment*/
+
+  body{
+    background-color: brown;
+  }
+
+  div{
+
+    background-color: aqua;
+    width: 500px;
+    height: 500px;
+    position: relative;
+  }
+  h1 {
+    width: 200px;
+    height: 40px;
+    background-color: blueviolet;
+    color: aliceblue;
+    box-shadow: 5PX 10PX 0PX black; 
+    border: 2px inset black;
+    /* margin: 0 0 0 auto; */
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+    top: 40%;
+
+  } 
+  
+  
+  

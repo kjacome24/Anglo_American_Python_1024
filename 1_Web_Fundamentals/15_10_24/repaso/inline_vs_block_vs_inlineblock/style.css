@@ -10,26 +10,26 @@
     background-color: salmon;
 }
 
-/* a{
+a, label, input, img, button{
     display: block;
 }
 
-label{
-    display: block;
+
+
+
+
+
+/* h2, h1, h6, p, ul,ol, li, a, label, form, input, table{
+    display: inline;
 } */
 
 
-h2, h1, h6, p, ul,ol, li, a, label, form, input, table{
-    display: inline;
-}
-
-
 /* Inline-block to allow control over their dimensions */
-/* h2, h1, h6, p, ul,ol, li, a, label, form, input, table{
+h2, h1, h6, p, ul,ol, li, a, label, form, input, table{
     display: inline-block;
 }
 
 h1{
     background-color: red;
-    height: 200px;
-} */
+    height: 500px;
+} 

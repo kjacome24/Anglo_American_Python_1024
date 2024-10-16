@@ -1,0 +1,23 @@
+#main_container{
+    background-color: red;
+    height: 10rem;
+    display: flex;
+}
+
+#container_hijo_1{
+    flex: 1;
+    background-color: aqua;
+    margin: 1rem;
+}
+
+#container_hijo_2{
+    flex: 5;
+    background-color: blue;
+    margin: 1rem;
+}
+
+#container_hijo_3{
+    flex: 1;
+    background-color: green;
+    margin: 1rem;
+}
