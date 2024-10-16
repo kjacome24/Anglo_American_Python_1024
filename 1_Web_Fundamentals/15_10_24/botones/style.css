@@ -1,0 +1,30 @@
+div{
+    margin-bottom: 1rem;
+}
+
+
+
+#boton1{
+    background-color: #cccccc;
+    border: 2px solid black;
+    border-radius: 1rem;
+    width: 7%;
+}
+
+#boton2{
+    background-color: #ff6600;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+
+}
+
+#boton3{
+    background-color: #0099ff;
+    box-shadow: 5px 5px 5px #888888;
+    color: white;
+    border: none;
+    height: 30px;
+}
