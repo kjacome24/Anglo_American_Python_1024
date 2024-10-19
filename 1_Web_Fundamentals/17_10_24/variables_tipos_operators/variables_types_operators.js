@@ -34,7 +34,7 @@ console.log(s.split(""));
 
 
 
-
+///
 const cost_per_day = {
     Monday: 100,
     Tuesday: 200,
@@ -51,7 +51,5 @@ for (let day in cost_per_day) {
     console.log(`${day}: ${cost_per_day[day]}`);
     promedio += cost_per_day[day];
 }
-
-console.log(promedio  ) ;
-
-console.log(cost_per_day.length);
+promedio = promedio/Object.keys(cost_per_day).length;
+console.log(promedio); 

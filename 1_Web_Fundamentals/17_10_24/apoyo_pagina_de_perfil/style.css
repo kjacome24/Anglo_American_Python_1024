@@ -111,4 +111,5 @@ main{
 .second_main{
     flex: 1;
     background-color: aqua;
+    height: 60rem;
 }
