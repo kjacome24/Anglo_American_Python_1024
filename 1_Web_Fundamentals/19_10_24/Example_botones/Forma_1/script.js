@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function() { ////** Esta linea se asegura de cargar los elementos del DOM antes de ejecutar el codigo de JS */
+
+
+
+
 const turnOff = (element) => {
     if (element.innerText === "Off") {
         element.style.backgroundColor = "green";
@@ -22,3 +27,4 @@ document.getElementById("btn3").addEventListener("click", function() {
 );
 
 
+});
