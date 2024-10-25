@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+        #div1{
+            border: 2px solid pink;
+        }
+        #div2{
+            border: 2px solid blue;
+        }
+        #div3{
+            border: 2px solid green;
+        }
+        #div4{
+            border: 2px solid red;
+
+        }
+        #hoover_text{
+            background-color: tomato;
+        }
+        #div5{
+            background-color: yellow;
+            height: 50px;
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            <!-- position: absolute;
+            top: 0; -->
+
+        }
+        #div6{
+            border: 2px solid aquamarine;
+        }
+        #div7{
+            border: 2px solid palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos Js</h1>
+    <div id="div1">
+        <h2>Ejemplo selector</h2>
+        <form>
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="select">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </form>
+        <p>Input:<span id="choosen"></span></p>
+    </div>
+    <div id="div2">
+        <h2>Ejemplo input</h2>
+        <form>
+            <input type="text" id="input" placeholder="Escribe algo">
+        </form>
+        <p>Input:<span id="input_text"></span></p>
+    </div>
+
+    <div id="div3">
+        <h2>Ejemplo input y boton</h2>
+
+            <input type="text" id="input_form" placeholder="Escribe algo">
+            <button typer="botton" id="btn">Enviar</button>
+
+        <p>Input:<span id="input_text2"></span></p>
+    </div>  
+    <div id="div4">
+        <h2>hoover</h2>
+        <p id="hoover_text">Mause por fuera</p>
+    </div>
+    <div id="div5">
+        <h1>EJemplo Cookies</h1>
+        <p>Acepta las cookies?/?????</p>
+        <button id="btn_cookies">Aceptar</button>
+    </div>
+    <div id="div6">
+        <h2>Ejemplo foco</h2>
+        <input type="text" id="focus_input" placeholder="Escribe algo">
+        <input type="text" id="focus_input2" placeholder="Escribe algo">
+        <p id="focus_text">Este campo no esta en foco</p>
+    </div>
+    <div id="div7">
+        <button id="doble_click_btn">Doble clic aqui</button>
+        <p id="doble_click_text">No hay doble cicl</p>
+    </div>
+</body>
+</html>
