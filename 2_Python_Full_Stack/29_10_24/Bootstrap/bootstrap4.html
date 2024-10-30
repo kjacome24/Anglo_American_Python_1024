@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card-custom {
+            border: 1px solid #007bff; /* Borde azul */
+            border-radius: 15px; /* Bordes redondeados */
+            transition: box-shadow 0.3s ease;
+        }
+
+        #custom-text {
+            
+            color: red !important; /* This will override the Bootstrap text-success class */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="card card-custom text-success">
+        <div class="card-body">
+            <h5 class="card-title">Tarjeta Personalizada 1</h5>
+            <p class="card-text">Esta tarjeta tiene un borde personalizado y sombra en hover.</p>
+            <a href="#" class="btn btn-primary">Más información</a>
+        </div>
+        
+    </div>
+    <div id="custom-text" class="text-success">
+        Este texto debería ser rojo, no verde.
+    </div>
+    
+</body>
+
+</html>
