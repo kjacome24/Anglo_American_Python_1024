@@ -48,12 +48,19 @@ print("Llaves del diccionario:", dic.keys())  # Salida: dict_keys(['name', 'age'
 print("Valores del diccionario:", dic.values())  # Salida: dict_values(['Juan', 30, True])
 print("Items del diccionario:", dic.items())  # Salida: dict_items([('name', 'Juan'), ('age', 30), ('is_alive', True)])
 
+# Sorting
+lista = [1, 2, 5, 4, 3]
+lista.sort()
+print(lista)
+lista_desc = sorted(lista, reverse=True)
+print(lista_desc)
 
 
 
-
-
-
+# Organizar por Llaves
+my_dict = {'b': 3, 'a': 1, 'c': 2}
+sorted_by_keys = dict(sorted(my_dict.items()))
+print("Sorted by keys:", sorted_by_keys)
 
 
 # Ciclos (for, range y while) ##############################################################
@@ -108,3 +115,14 @@ def fizz_buzz(numero):
 # Ejecutando la función FizzBuzz en un rango
 for i in range(1, 16):
     print(fizz_buzz(i))  # Imprime Fizz, Buzz, FizzBuzz o el número según corresponda
+
+
+
+#### Uso de inputs
+
+nombre = input("Ingresa tu nombre:")
+numero = input("Ingresa un numero:")
+
+
+print(f'Hola {nombre}, el numero que ingresaste es {numero}')
+
