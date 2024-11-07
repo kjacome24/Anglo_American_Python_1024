@@ -1,33 +1,49 @@
-# Guía para Configurar un Entorno Virtual con Pipenv
+# Configuración de Entorno Virtual e Instalación de Flask con Pipenv
+
+## Configuración Inicial del Directorio
+1. **Navega al directorio de tu proyecto y crea una nueva carpeta para el entorno:**
+    ```bash
+    mkdir 3_entorno_pipenv
+    cd 3_entorno_pipenv
+    ```
 
 ## Instalación de Pipenv
-1. `pip install pipenv`
-    - Instala la herramienta Pipenv que nos ayudará a gestionar el entorno virtual y las dependencias del proyecto.
+2. **Instala Pipenv si aún no está instalado:**
+    ```bash
+    pip install pipenv
+    ```
+    - Este comando instala Pipenv, que gestiona los entornos virtuales y las dependencias del proyecto.
 
-## Creación del Repositorio
-2. Crear repositorio
-    - Crea un nuevo repositorio para tu proyecto donde se almacenará todo el código y las configuraciones.
+## Creación y Activación del Entorno Virtual
+3. **Inicializa y activa el entorno virtual utilizando Pipenv:**
+    ```bash
+    pipenv shell
+    ```
+    - Este comando crea un entorno virtual específico para tu proyecto y lo activa.
 
 ## Instalación de Flask
-3. `pipenv install flask`
-    - Instala el framework Flask dentro del entorno virtual.
+4. **Instala Flask dentro del entorno virtual activado:**
+    ```bash
+    pip install flask
+    ```
+    - Instala Flask dentro del entorno virtual para asegurar que todas las dependencias del proyecto estén contenidas.
 
-## Verificación de Errores
-4. Revisar que no tengamos errores
-    - Asegúrate de que no haya errores en la instalación de las dependencias.
+## Verificación de la Instalación y Activación del Entorno
+5. **Lista los paquetes instalados para verificar la instalación de Flask:**
+    ```bash
+    pip list
+    ```
+    - Muestra una lista de todos los paquetes instalados dentro del entorno virtual, incluyendo Flask y sus dependencias.
 
-## Activación del Entorno Virtual
-5. `pipenv shell`
-    - Activa el entorno virtual para trabajar en un entorno aislado.
-
-## Visualización del Entorno Virtual Activado
-6. Mostrar cómo se ve cuando tenemos el entorno virtual activado
-    - Muestra en la terminal cómo se ve cuando el entorno virtual está activado.
+6. **Representación visual del entorno virtual activado:**
+    - Muestra cómo cambia la terminal cuando el entorno virtual está activado, típicamente mostrando el nombre del entorno en el prompt de comandos.
 
 ## Salir del Entorno Virtual
-7. `exit`
-    - Sal del entorno virtual una vez que hayas terminado de trabajar.
+7. **Desactiva el entorno virtual cuando hayas terminado:**
+    ```bash
+    exit
+    ```
+    - Sale del entorno virtual y retorna a los ajustes predeterminados del sistema.
 
-## Listado de Paquetes Instalados
-8. `pip list`
-    - Muestra una lista de todos los paquetes instalados en el entorno virtual.
+Siguiendo estos pasos, habrás configurado un entorno virtual utilizando Pipenv, instalado Flask y asegurado que tu proyecto esté listo para el desarrollo. Esta configuración proporciona un ambiente de desarrollo controlado y consistente para proyectos en Python.
+
