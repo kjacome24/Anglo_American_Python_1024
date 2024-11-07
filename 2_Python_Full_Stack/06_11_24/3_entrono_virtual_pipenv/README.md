@@ -3,8 +3,8 @@
 ## Configuración Inicial del Directorio
 1. **Navega al directorio de tu proyecto y crea una nueva carpeta para el entorno:**
     ```bash
-    mkdir 3_entorno_pipenv
-    cd 3_entorno_pipenv
+    mkdir example
+    cd example
     ```
 
 ## Instalación de Pipenv
@@ -12,38 +12,35 @@
     ```bash
     pip install pipenv
     ```
-    - Este comando instala Pipenv, que gestiona los entornos virtuales y las dependencias del proyecto.
+    - Este comando instala Pipenv, que gestiona los entornos virtuales y las dependencias del proyecto. Asegúrate de que está correctamente instalado y observa cualquier mensaje sobre actualizaciones necesarias.
 
 ## Creación y Activación del Entorno Virtual
 3. **Inicializa y activa el entorno virtual utilizando Pipenv:**
     ```bash
-    pipenv shell
+    pipenv install flask
     ```
-    - Este comando crea un entorno virtual específico para tu proyecto y lo activa.
-
-## Instalación de Flask
-4. **Instala Flask dentro del entorno virtual activado:**
-    ```bash
-    pip install flask
-    ```
-    - Instala Flask dentro del entorno virtual para asegurar que todas las dependencias del proyecto estén contenidas.
+    - Este comando no solo instala Flask sino que también crea un entorno virtual para el proyecto si no existe uno previamente, como indicado por la creación del `Pipfile` y `Pipfile.lock`.
 
 ## Verificación de la Instalación y Activación del Entorno
-5. **Lista los paquetes instalados para verificar la instalación de Flask:**
+4. **Activa el entorno virtual y verifica la instalación:**
     ```bash
+    pipenv shell
     pip list
     ```
-    - Muestra una lista de todos los paquetes instalados dentro del entorno virtual, incluyendo Flask y sus dependencias.
-
-6. **Representación visual del entorno virtual activado:**
-    - Muestra cómo cambia la terminal cuando el entorno virtual está activado, típicamente mostrando el nombre del entorno en el prompt de comandos.
+    - Al activar el entorno con `pipenv shell`, te mueves a un subshell donde el entorno virtual está activo. El comando `pip list` mostrará Flask y sus dependencias que fueron instaladas.
 
 ## Salir del Entorno Virtual
-7. **Desactiva el entorno virtual cuando hayas terminado:**
+5. **Desactiva el entorno virtual cuando hayas terminado:**
     ```bash
     exit
     ```
-    - Sale del entorno virtual y retorna a los ajustes predeterminados del sistema.
+    - Este comando te saca del entorno virtual y vuelve a la configuración normal de tu sistema.
+
+## Revisión Final del Directorio
+6. **Verifica los archivos en el directorio para confirmar la creación de `Pipfile` y `Pipfile.lock`:**
+    ```bash
+    dir
+    ```
+    - Este paso confirma la presencia de `Pipfile` y `Pipfile.lock` en tu directorio, indicando que las dependencias están siendo gestionadas correctamente.
 
 Siguiendo estos pasos, habrás configurado un entorno virtual utilizando Pipenv, instalado Flask y asegurado que tu proyecto esté listo para el desarrollo. Esta configuración proporciona un ambiente de desarrollo controlado y consistente para proyectos en Python.
-
