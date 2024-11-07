@@ -3,8 +3,13 @@
 Este documento proporciona instrucciones paso a paso para configurar un entorno virtual con venv e instalar Flask.
 
 ## Crear un Entorno Virtual
+Dirígete a la terminal y muévete al directorio donde quieres guardar tu entorno virtual. Ejemplo:
 
-Ejecuta el siguiente comando en la terminal para crear un entorno virtual llamado `entorno_virtual`:
+```bash
+cd /OneDrive/Documents/Example
+```
+
+Ejecuta el siguiente comando en la terminal para crear un entorno virtual llamado `entorno_virtual` dentro del directorio deseado:
 
 ```bash
 python -m venv entorno_virtual
@@ -24,7 +29,6 @@ entorno_virtual\Scripts\activate
 ```
 
 Una vez que el entorno virtual esté activado, verás `(entorno_virtual)` al inicio de la línea en la terminal, indicando que estás en el entorno virtual.
-
 
 ## Instalar Flask
 
@@ -48,6 +52,6 @@ Cuando termines de usar el entorno virtual, puedes desactivarlo con el siguiente
 
 ```bash
 deactivate
-``
+```
 
 ¡Felicidades! Has configurado tu entorno virtual e instalado Flask.
