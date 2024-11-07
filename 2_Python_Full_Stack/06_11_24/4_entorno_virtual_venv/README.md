@@ -25,13 +25,6 @@ entorno_virtual\Scripts\activate
 
 Una vez que el entorno virtual esté activado, verás `(entorno_virtual)` al inicio de la línea en la terminal, indicando que estás en el entorno virtual.
 
-## Desactivar el Entorno Virtual
-
-Cuando termines de usar el entorno virtual, puedes desactivarlo con el siguiente comando:
-
-```bash
-deactivate
-```
 
 ## Instalar Flask
 
@@ -48,5 +41,13 @@ Para ver las bibliotecas instaladas en el entorno virtual, usa el comando:
 ```bash
 pip list
 ```
+
+## Desactivar el Entorno Virtual
+
+Cuando termines de usar el entorno virtual, puedes desactivarlo con el siguiente comando:
+
+```bash
+deactivate
+``
 
 ¡Felicidades! Has configurado tu entorno virtual e instalado Flask.
