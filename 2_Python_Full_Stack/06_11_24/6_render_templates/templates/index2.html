@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Galaxia de Star Wars</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ffe81f;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        p, h3, h4 {
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #b3ff00;
+            text-shadow: 1px 1px 2px #000;
+        }
+        h4 {
+            color: #ff4500;
+            font-style: italic;
+            text-shadow: 1px 1px 4px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la Galaxia de Star Wars</h1>
+    
+    <p>Cita: "{{ cita }}"</p>
+    <p>Repeticiones: {{ repite }}</p>
+
+    <!-- Repetimos la cita la cantidad de veces indicada -->
+    {% for x in range(repite) %}
+        <h3>{{ cita }}</h3>
+    {% endfor %}
+
+    <!-- Verificamos si la cita contiene la palabra "Force" -->
+    {% if "Force" in cita %}
+        <h4>La Fuerza es poderosa en ti.</h4>
+    {% endif %}
+</body>
+</html>
