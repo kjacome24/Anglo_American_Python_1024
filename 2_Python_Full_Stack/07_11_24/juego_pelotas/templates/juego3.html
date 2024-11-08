@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+        .circulo{
+            background-color: red;
+            width: 5rem;
+            height: 5rem;
+            margin: 1rem;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juguemos a las pelotas</h1>
+    <main>
+        {% for i in range(number)%}
+        <div class="circulo" style="background-color: {{color}};">
+
+        </div>
+        {% endfor %}
+
+    </main>
+</body>
+</html>

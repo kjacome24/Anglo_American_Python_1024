@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguemos a las Pelotas - Star Wars Edition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000; /* Dark space-like background */
+            color: #FFE81F; /* Star Wars yellow */
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 2rem;
+        }
+        .circulo {
+            width: 5rem;
+            height: 5rem;
+            margin: 1rem;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        .circulo:hover {
+            transform: scale(1.1);
+        }
+
+        .star-wars-logo {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juguemos a las Pelotas en una Galaxia Muy Lejana...</h1>
+    <main>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+    </main>
+    <div class="star-wars-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Star Wars Logo" width="150">
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            text-align: center;
+        }
+        main{
+            margin: 0 auto;
+        }
+        .row{
+            flex:1;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .color1{
+            width: 5rem;
+            height: 5rem;
+            background-color: pink;
+            border: 2px solid black;
+        }
+        .color2{
+            width: 5rem;
+            height: 5rem;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .color3{
+            width: 5rem;
+            height: 5rem;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loteria Mexicana</h1>
+    </header>
+    <main>
+        {%for i in range(rows) %}
+        <div class="row">
+            {%for j in range(columns) %}
+                {%if (i +j)%3 ==0 %}
+                <div class="color1">
+                    {{textos[i * columns + j]}}
+                </div>
+                {%elif (i + j)%3==1%}
+                <div class="color2">
+                    {{textos[i * columns + j]}}
+                </div>
+                {%else%}
+                <div class="color3">
+                    {{textos[i * columns + j]}}
+                </div>
+                {%endif%}
+            {% endfor%}
+        </div>
+        {%endfor %}
+    </main>
+</body>
+</html>
