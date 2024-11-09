@@ -30,6 +30,13 @@ def main():
     return render_template('index.html', rows=4, columns=4, colors = colors, textos = textos)
 
 
+@app.route('/extra')
+def extra():
+    colors = ['color1','color2','color3']
+    textos = sample(cartas, 16)
+    return render_template('index_ejemplo_base.html', rows=4, columns=4, colors = colors, textos = textos)
+
+
 @app.route('/loteria/<int:rows>')
 def main2(rows):
     colors = ['color1','color2','color3']
