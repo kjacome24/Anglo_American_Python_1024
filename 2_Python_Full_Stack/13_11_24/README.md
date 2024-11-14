@@ -13,7 +13,7 @@ SELECT nombre, año_nacimiento FROM personajes;
 SELECT nombre, modelo FROM naves;
 ```
 
-##### 2. Condicionales con WHERE
+### 2. Condicionales con WHERE
 
 ```sql
 SELECT nombre FROM personajes WHERE id = 5;                -- Obtiene el nombre del personaje con ID 5
@@ -58,14 +58,14 @@ UPDATE naves SET modelo = 'YT-1300 modificado' WHERE nombre = 'Millennium Falcon
 UPDATE planetas SET poblacion = 50000 WHERE nombre = 'Hoth';
 ```
 
-##  6. Eliminar Registros con DELETE
+###  6. Eliminar Registros con DELETE
 
 ```sql
 delete from personajes where id=12;
 
 ```
 
-## 7. Funciones Comunes en SQL
+### 7. Funciones Comunes en SQL
 
 ```sql
 -- Calcular el promedio de año de nacimiento de los personajes
@@ -99,7 +99,7 @@ SELECT año_nacimiento, COUNT(*) AS total_personajes FROM personajes GROUP BY a�
 
 
 
-#### 9 inner join
+### 9 inner join
 ```sql
 -- Obtener todos los registros combinados de personajes y planetas (solo los que hacen match)
 SELECT * FROM personajes JOIN planetas ON personajes.planeta_id = planetas.id;
