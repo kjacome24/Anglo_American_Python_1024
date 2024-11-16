@@ -27,9 +27,33 @@
 
 <body>
     <header>
-        <h1>Hola, your server is up!</h1>
+        <h1>Hola </h1>
+        <h2>Estos son los personajes de star Wars de mi DB</h2>
     </header>
     <main>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">ID #</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Año_nacimiento</th>
+                    <th scope="col">ID Planeta</th>
+                    <th scope="col">ID Especie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for personaje in personajes %}
+                <tr>
+                    <td>{{personaje.id}}</td>
+                    <td>{{personaje.nombre}}</td>
+                    <td>{{personaje.año_nacimiento}}</td>
+                    <td>{{personaje.planeta_id}}</td>
+                    <td>{{personaje.especie_id}}</td>
+                </tr>
+                {% endfor%}
+            </tbody>
+        </table>
+
     </main>
     <footer>
 

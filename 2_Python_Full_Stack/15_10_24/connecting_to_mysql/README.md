@@ -94,3 +94,7 @@ def connectToMySQL(db):
 
    return MySQLConnection(db)
 ```
+
+## 4 
+To create a file for the class that will storage the data of the table as an object. 
+
