@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: yellow;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tu servidor esta funcionando!</h1>
+    </header>
+    <main>
+
+        <h2>Estas son las naves disponibles:</h2>
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col"> id #</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for nave in navesx%}
+              <tr>
+                <td >{{nave.id}}</td>
+                <td >{{nave.nombre}}</td>
+                <td >{{nave.modelo}}</td>
+                <td > <a href="/naves/{{nave.id}}" class="btn btn-success">Ver</a></td>
+              </tr>
+              {%endfor%}
+            </tbody>
+          </table>
+
+          <h2>Estos son los personajes disponibles</h2>
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col"> id #</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Ano de nacimiento</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for personaje in personajesx%}
+              <tr>
+                <td >{{personaje.id}}</td>
+                <td >{{personaje.nombre}}</td>
+                <td >{{personaje.nombre}}</td>
+                <td > <button class="btn btn-success">Ver</button></td>
+              </tr>
+              {%endfor%}
+            </tbody>
+          </table>
+
+
+    </main>
+    <footer>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Logo de stars wars">
+    </footer>
+</body>
+</html>
