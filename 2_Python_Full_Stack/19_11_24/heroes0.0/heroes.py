@@ -1,0 +1,31 @@
+from mysqlconnection import connectToMySQL
+
+class Heroe:
+    db_schema = 'super_heroes'
+    def __init__(self,data):
+        self.id = data['id'] 
+        self.nombre = data['nombre']
+        self.poder = data['poder']
+        self.link_img = data['link_img']
+        self.bio = data['bio']
+        self.created_at = data['created_at']
+        self.update_at = data['update_at']
+
+    @classmethod
+    def get_all(cls):
+        query = "select * from heroes;"
+        resultados = connectToMySQL(cls.db_schema).query_db(query)
+        heroes = []
+        for heroe in resultados:
+            heroes.append(cls(heroe))
+        return heroes
+    
+    @classmethod
+    def crear(cls,data):
+        query = "insert into heroes ( nombre, poder, link_img, bio) values (%(nombre)s,%(poder)s,%(link_img)s,%(bio)s );"
+        return connectToMySQL(cls.db_schema).query_db(query,data)
+    
+    @classmethod
+    def eliminar(cls,data):
+        query = "delete from heroes where id=%(id)s"
+        return connectToMySQL(cls.db_schema).query_db(query,data)

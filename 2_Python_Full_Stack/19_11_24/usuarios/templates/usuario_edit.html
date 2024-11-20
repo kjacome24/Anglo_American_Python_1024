@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: burlywood;
+            color: purple;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crear nuevo usuario:</h1>
+    </header>
+    <main>
+
+      <form action="/usuarios/actualizar/{{usuario.id}}" method="POST" class="text-light">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required value="{{usuario.nombre}}">
+        </div>
+        <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required value="{{usuario.apellido}}">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required value="{{usuario.email}}">
+        </div>
+
+        <button type="submit" class="btn btn-warning">Crear</button>
+    </form>
+
+
+    </main>
+    <footer>
+     </footer>
+</body>
+</html>
