@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: burlywood;
+            color: purple;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Usuario {{usuario.id}}:</h1>
+    </header>
+    <main>
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">Nombre completo: {{usuario.nombre}} {{usuario.apellido}}</p>
+                <p class="card-text">Email: {{usuario.email}}</p>
+                <p class="card-text">Fcha de creacion: {{usuario.created_at}}</p>
+                <p class="card-text">Fecha de actualizacion: {{usuario.updated_at}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="/usuarios/editar/{{usuario.id}}" class="btn btn-warning">Editar</a>
+                <a href="/usuarios/eliminar/{{usuario.id}}" class="btn btn-danger">Borrar</a>
+            </div>
+          </div>
+    </main>
+    <footer>
+     </footer>
+</body>
+</html>
