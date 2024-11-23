@@ -22,6 +22,7 @@
             flex: 8;
             padding: 2rem;
         }
+
     </style>
 </head>
 <body>
@@ -29,10 +30,10 @@
         <h1>Crear Estudiante</h1>
     </header>
     <main>
-        <form action="/estudiantes/guardar" method="POST" >
+        <form action="/estudiantes/guardar" method="POST"  >
             <div>
                 <label for="curso_id" class="form-label">Curso:</label>
-                <select class="form-control" id="curso" name="curso_id" required>
+                <select class="form-control" id="curso" name="curso_id" required >
                     <option value="">--Selecciona una opcion--</option>
                     {%for curso in cursos%}
                     <option value="{{curso.id}}">{{curso.nombre}}</option>
