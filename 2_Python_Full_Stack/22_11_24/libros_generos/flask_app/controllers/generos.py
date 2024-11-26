@@ -22,4 +22,4 @@ def cursos_filtro():
     }
     genero = Genero.get_genero_y_libros(data)
     generos = Genero.get_all()
-    return render_template('curso_libros.html',generos=generos, genero=genero)
+    return render_template('genero_libros.html',generos=generos, genero=genero)
