@@ -1,6 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL ###Nos podemos conectar a la BD y podemos jugar con la creacion del objeto y sus metodos
 #####aqui debes importar otras clases en caso de que sea necesario
-
+from flask import flash
 
 class Amistad:
     db_schema = 'friendships_schema' ## Cambiar la BD a la que estamos apuntando
@@ -22,5 +22,16 @@ class Amistad:
             amistades.append(cls(amistad))
         return amistades
     
-
+    @classmethod
+    def save(cls,data):
+        query = "insert into friendships (user_id, friend_id) values (%(user_id)s,%(friend_id)s);"
+        return connectToMySQL(cls.db_schema).query_db(query,data)
+    
+    @staticmethod
+    def validar(data):
+        is_valid = True
+        if data['user_id'] == data['friend_id']:
+            flash(["Tu no puedes seguierte a ti mismo",1])
+            is_valid = False
+        return is_valid
 
