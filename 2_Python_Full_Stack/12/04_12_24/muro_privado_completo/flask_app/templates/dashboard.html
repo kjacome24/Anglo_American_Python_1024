@@ -63,21 +63,38 @@
     </header>
     <main class="container mt-4 ">
         <div id="main_a">
+            <h4> <span style="color: blue;">{{numero_mensajes}}</span> Message(s) for you</h4>
             {%for mensaje in mensajes%}
             <div class="card" style="margin: 1rem;"> 
-                <div class="card-header">{{mensaje.sender_id.nombre}} said ({{mensaje.tiempo_en_formato()}} hours ago )</div>
+                <div class="card-header">{{mensaje.sender_id.nombre}} said <span style="color: blue;">({{mensaje.tiempo_en_formato()}} )</span></div>
                 <div class="card-body">
                     <p>{{mensaje.contenido}}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="/delete/{{id}}">Delete</a>
+                    <a href="/delete/{{mensaje.id}}">Delete</a>
                 </div>
             </div>
             {%endfor%}
         </div>
         <div id="main_b">
+            <h4>Send Messages</h4>
+            <h5>You have sent <span style="color: blue;">{{mensajes_enviados}}</span> Messages so far</h5>
+                                    {% with messages =get_flashed_messages(with_categories=true) %}<!-- declara una variable llamada mensajes -->
+    
+                    {% if messages %}<!-- revisa si hay algún mensaje -->
+         
+                            {% for category, message in messages %}   <!-- recorre los mensajes -->
+                                {%if category=='mensajes' %}
+                                    <p  class="alert alert-warning">{{message}}</p>  <!-- muestra cada mensaje en una etiqueta de párrafo --> 
+                                {%endif%}
+                            {% endfor %}
+         
+                    {% endif %}
+         
+                {% endwith %}
             {%for usuario in usuarios%}
                 {%if session['id'] != usuario.id %}
+
                 <form action="/enviar_mensaje" method="POST" class="border border-primary rounded">
                     <input type="hidden" name="receiver_id" value="{{usuario.id}}">
                     <input type="hidden" name="sender_id" value="{{session['id']}}">  
