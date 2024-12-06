@@ -36,7 +36,13 @@ Haz clic en "Lanzar Instancia".
 Conéctate al servidor mediante SSH con tu Gitbash, pero asegurate que estas ubicado en el folder donde este la llave:
 
 ```bash
-ssh -i "tu_clave.pem" ubuntu@<tu_ip_publica>
+ssh -i "tu_clave.pem" ubuntu@<tu__publica>
+```
+
+Ejemplo:
+
+```bash
+ssh -i "claves_supersecretas.pem" ubuntu@ec2-18-118-184-194.us-east-2.compute.amazonaws.com
 ```
 
 ## 6. Instalar Librerías Básicas en el Servidor
