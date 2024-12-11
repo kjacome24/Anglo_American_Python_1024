@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        #header_b, #header_a{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        footer {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            flex: 8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 1rem;
+        }
+        #card_viaje{
+            flex: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="bg-warning text-white">
+        <div id="header_a">
+            <h1 class="text-center">Bienvenid@ {{session.nombre}}</h1>
+        </div>
+        <div id="header_b">
+            <div>
+                <a href="/dashboard" class="btn btn-light">Dashboard</a>
+            </div>
+            <div>
+                <form action="/destroy" method="POST">
+                    <button type="submit" class="btn btn-danger">Cerrar sesion</button>
+                </form>    
+            </div>
+        </div>
+    </header>
+    <main class="container mt-4 ">
+        <div class="card" id="card_viaje">
+            <div class="card-header">
+                <h2>{{viaje.destino}}</h2>
+            </div>
+            <div class="card-body">
+                <p><span style="font-weight: bold;">Organizador: </span>{{viaje.organizador_id.nombre}}</p>
+                <p><span style="font-weight: bold;">Fecha de Inicio: </span>{{viaje.fecha_inicio}}</p>
+                <p><span style="font-weight: bold;">Fecha de Fin: </span>{{viaje.fecha_fin}}</p>
+                <p><span style="font-weight: bold;">Itinerario: </span>{{viaje.itinerario}}</p>
+            </div>
+            <div class="card-footer">
+                <p style="font-weight: bold;">Viajeros:</p>
+                <table class="table table-hover ">
+                    <tbody>
+                        {% for usuario in viaje.unirse%}
+                        {%if usuario.nombre != None%}
+                      <tr>
+                        <td>{{usuario.nombre}}</td>
+                      </tr>
+                        {%endif%}
+                      {%endfor%}
+                    </tbody>
+                  </table>
+ 
+                    {% if unido%}
+                    <form action="/salirse" method="POST" >
+                        <input type="hidden" name="usuario_id" value="{{session['id']}}">
+                        <input type="hidden" name="viaje_id" value="{{viaje.id}}">
+                        <button type="submit" class="btn btn-dark">Cancelar</button>
+                    </form>
+                    {%else%}
+                    <form action="/unirse" method="POST" >
+                        <input type="hidden" name="usuario_id" value="{{session['id']}}">
+                        <input type="hidden" name="viaje_id" value="{{viaje.id}}">
+                        <button type="submit" class="btn btn-primary">Unirse</button>
+                    </form>
+                    {%endif%}
+            </div>
+        </div>
+
+    
+
+    </main>
+
+    <footer class="bg-warning text-white">
+        <P>2024 Resetas App </P>
+    </footer>
+
+</body>
+
+</html>

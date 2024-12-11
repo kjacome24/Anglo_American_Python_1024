@@ -11,7 +11,7 @@ PASSWORD_REGEX = re.compile(r'^(?=.{8,})(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[@
 
 
 class Usuario:
-    db_schema = 'resetas_con_login' ## Cambiar la BD a la que estamos apuntando
+    db_schema = 'viajero_frecuente' ## Cambiar la BD a la que estamos apuntando
     def __init__(self,data):
         self.id = data['id'] 
         self.nombre = data['nombre']

@@ -55,7 +55,9 @@ def login():
         'password': request.form['password'],
     }
     usuario = Usuario.get_one_by_email(data)
-    print(usuario)
+    if usuario is None:
+        flash("El correo no esta registrado!","login")
+        return redirect('/')
     if not bcrypt.check_password_hash(usuario.password, data['password']):
         flash("El correo o el password no coniciden con la info en Base de datos!","login")
         return redirect('/')
